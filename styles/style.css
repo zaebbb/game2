@@ -1,0 +1,358 @@
+@import url('./../fonts/font.ttf');
+@import url('./../fonts/mont.ttf');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    transition: .5s;
+    overflow: hidden;
+}
+body{
+    background: url('./../img/bg.png');
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+}
+.headerGame{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: "Lemon Tuesday";
+    text-transform: uppercase;
+}
+section{
+    height: 100vh;
+    overflow: hidden;
+}
+.startMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+   
+}
+.startMenu.hidd{
+    opacity: 0;
+    visibility: hidden;
+}
+.startMenu.dn{
+    display: none;
+}
+.startMenu .modalStart{
+    background: rgba(0,0,0,0.5);
+    padding: 50px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1000;
+}
+.persons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.settGameUser h2{
+    text-align: center;
+    font-family: 'Montserrat Light';
+    font: 28px;
+    color: #fff;
+    margin-top: 20px;
+}
+.persons div img{
+    max-width: 200px;
+    filter: grayscale(1);
+}
+.persons div img:hover{
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+.persons div img.filt{
+    filter: grayscale(1);
+}
+.persons div img.filtNone{
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+.persons div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.persons div h3{
+    color: #fff;
+    font-family: 'Montserrat Light';
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.startGame button,
+.nameHero{
+    width: 100%;
+    height: 40px;
+    font-family: 'Montserrat Light';
+    font-size: 18px;
+    padding-left: 25px;
+    border-radius: 10px;
+    border: none;
+}
+.startGame button{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}   
+.startGame button:hover{
+    background: #fff;
+    color: #000;
+}
+.startGame button.dissStartBtn{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.startGame button.dissStartBtn.start{
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: painted;
+}
+.manual{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat Light';
+}
+.manual i{
+    font-size: 25px;
+    margin-right: 20px;
+}
+.menualDescr{
+    position: absolute;
+    right: 0;
+    max-width: 600px;
+    background: rgba(0,0,0,.8);
+    padding: 50px 80px;
+    z-index: 10000;
+    font-family: 'Montserrat Light';
+    color: #fff;
+    font-size: 20px;
+    line-height: 150%;
+    transform: translateX(100px) scale(0);
+    border-radius: 30px;
+}
+.menualDescr.hidd{
+    transform: translateX(0px) scale(1);
+    border-radius: 0px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.audioBg{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* load game */
+.loadVideo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+.loadVideo.hidd{
+    opacity: 0;
+    visibility: hidden;
+}
+.loadVideo.dn{
+    display: none;
+}
+.loadVideo h3{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Montserrat Light';
+    margin-bottom: 40px;
+}
+.loadVideo video{
+    max-width: 800px;
+    width: 100%;
+}
+
+
+/* game */
+.game{
+    position: relative;
+}
+.game.dn{
+    display: none;
+}
+.game.hidd{
+    opacity: 0;
+    visibility: hidden;
+}
+.platformBottom{
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+}
+.platformBottom img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.playerAnimal{
+    width: 150px;
+    position: absolute;
+    bottom: 65px;
+    z-index: 10010;
+}
+.giens img{
+    width: 150px;
+    position: absolute;
+    bottom: 65px;
+    right: 0;
+    z-index: 10000;
+    transition: 5s linear;
+}
+.platform img{
+    width: 300px;
+    position: absolute;
+    z-index: 10000;
+    bottom: 100px;
+    right: 300px;
+}
+.foods .food{
+    position: absolute;
+    width: 50px;
+    z-index: 10001;
+    bottom: 210px;
+    right: 410px;
+}
+.foods .food.add{
+    opacity: 0;
+    visibility: hidden;
+}
+.border{
+    width: 1px;
+    height: 200px;
+    border-left: 1px dashed #fff;
+    z-index: 10100;
+    position: absolute;
+    bottom: 65px;
+    left: 1200px;
+}
+.indicators{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    padding: 15px 30px;
+    border-bottom-right-radius: 10px;
+}
+.indicators div{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: 'Montserrat Light';
+    margin-bottom: 10px;
+}
+.indicators div img{
+    width: 50px;
+    margin-right: 20px;
+}
+.hp{
+    align-items: center;
+}
+.hp i{
+    font-size: 24px;
+    margin-right: 20px;
+    
+}
+.seconds{
+    margin-right: 30px;
+}
+
+/*  end game */
+.gameEnd.dn {
+    display: none;
+}
+.gameEnd.hidd{
+    opacity: 0;
+    visibility: hidden;
+}
+.gameEnd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalEnd{
+    color: #fff;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.5);
+    font-family: 'Montserrat Light';
+}
+.modalEnd h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.modalEnd form{
+    display: flex;
+    flex-direction: column;
+}
+.modalEnd form input[type="text"]{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+.modalEnd form input[type="submit"]{
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Montserrat Light';
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.modalEnd table{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.modalEnd table tr td{
+    border: 1px solid #fff;
+    padding: 5px 10px;
+}
+
+.fa-book{
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }
+    25%{
+        transform: rotate(-45deg)
+    }
+    50%{
+        transform: rotate(0deg)
+    }
+    75%{
+        transform: rotate(45deg)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+}

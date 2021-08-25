@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameThimonAndPymba</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <section class="startMenu">
+        <div class="modalStart">
+            <h1 class="headerGame">
+                Тимон и пумба
+            </h1>
+
+            <div class="settGameUser">
+                <input type="text" placeholder="Ваше имя" class="nameHero" onkeyup="checkDataStartGame();">
+                <h2>Выбери персонажа</h2>
+                <div class="persons">
+                    <div class="timon">
+                        <h3>Тимон</h3>
+                        <img src="./img/skin_start_timon.png">
+                    </div>
+                    <div class="pumba">
+                        <h3>Пумба</h3>
+                        <img src="./img/skin_start_pumba.png">
+                    </div>
+                </div>
+                <div class="startGame">
+                    <button class="dissStartBtn">Начать</button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="manual">
+            <i class="fas fa-book"></i> <span>Инструкция</span>
+        </div>
+        <div class="menualDescr">
+            <p>Правила игры подразумевают адекватное прохождение сея игры без использования какких либо читов иначе тебе вырвут язык и закинут в кипящую лаву а если выживешь тебя раслпстают по твоей дестской и будут долбить шокером пока не перестанешь дергаться............... УДАЧИ!)))))))))
+            </p>
+        </div>
+
+        <div class="audioBg">
+            <audio controls src="./audio/audioBg.mp3"></audio>
+        </div>
+    </section>
+
+    <section class="loadVideo hidd dn">
+        <h3>Нажмите "пробел" чтобы пропустить</h3>
+        <video class="videoLoaded" src="./video/videoStart.mp4"></video>
+    </section>
+
+
+    <section class="game dn hidd">
+        <img src="./img/skin_game_timon.png" class="playerAnimal">
+
+
+        <div class="giens">
+        </div>
+
+        <div class="platforms">
+        </div>
+
+        <div class="platformBottom">
+            <img src="./img/platform_bottom.png">
+        </div>
+
+        <div class="indicators">
+            <div class="hp">
+                <i class="far fa-heart"></i><span>100 HP</span>
+            </div>
+            <div class="food_eat">
+                <img src="./img/food_1.png"><span>0 - съедено гусениц</span>
+            </div>
+            <div class="timer">
+                <span class="minutes">00</span>: <span class="seconds">00</span> - время игры
+            </div>
+        </div>
+
+        <div class="border"></div>
+    </section>
+    
+    <section class="gameEnd dn hidd">
+        <div class="modalEnd">
+            <h3>Игра завершена!</h3>
+            
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>Игрок</td>
+                    <td>Результат</td>
+                </tr>
+            </table>
+
+            <form method="POST">
+                <input type="text" name="name" class="name">
+                <input type="text" name="rating" class="rating">
+                <input type="submit" value="Еще раз" class="submit">
+            </form>
+        </div>
+        
+    </section>
+
+    <script src="https://kit.fontawesome.com/7438528e75.js" crossorigin="anonymous"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
